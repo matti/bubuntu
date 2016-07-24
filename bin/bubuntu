@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+CMD=${1:-bash}
+
+docker run -it --rm -h bubuntu -v $HOME:/home/$USER -w /home/$USER -u $USER bubuntu $CMD
+
