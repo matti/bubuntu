@@ -2,5 +2,4 @@
 
 CMD=${1:-bash}
 
-docker run -it --rm -h bubuntu -v $HOME:/home/$USER -w /home/$USER -u $USER bubuntu $CMD
-
+docker run -it --rm -h bubuntu -v $HOME:$HOME -w $(pwd) -u $USER bubuntu $CMD
